@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>扁平化可伸展导航[原创]</title>
+    <link rel="stylesheet" type="text/css" href="./font/icon.css">
+    <link rel="stylesheet" type="text/css" href="./css/nav.css">
+</head>
+<body>
+<div class="nav-header">
+    <ul>
+        <li>
+            <a class="nav-header-item nav-header-avtive" data-nav=".nav_sz" href="javascript:;"><i class="my-icon nav-icon icon_1"></i> <span>网站设置</span></a>
+        </li>
+        <li>
+            <a class="nav-header-item"  data-nav=".nav_wj" href="javascript:;"><i class="my-icon nav-icon icon_2"></i> <span>文件管理</span></a>
+        </li>
+        <li>
+            <a class="nav-header-item"  data-nav=".nav_dd" href="javascript:;"><i class="my-icon nav-icon icon_3"></i> <span>订单管理</span></a>
+        </li>
+    </ul>
+</div>
+
+
+<!--mini显示侧边栏-->
+<div class="nav-hover">
+    <div class="nav-top">
+        <div style="height: 60px;text-align: center;line-height: 60px;color: #fff;" class="hover-toggle">模式转换</div>
+        <div class="mini" style="border-bottom:1px solid rgba(255,255,255,.1)"><img src="http://www.jq22.com/demo/jQueryNav201710162238/images/mini.png" ></div>
+    </div>
+    <ul>
+        <li class="nav-box" data-nav=".nav_sz">
+            <a class="nav-iconbox" href="javascript:;"><i class="my-icon nav-icon icon_1"></i></a>
+            <div class="nav nav_sz">
+                <ul>
+                    <li class="nav-item">
+                        <a href="javascript:;"></i><span>网站配置</span><i class="my-icon nav-more"></i></a>
+                        <ul class="children-ul">
+                            <li class="children-one">
+                                <a href="javascript:;"><span>网站设置</span><i class="my-icon nav-more"></i></a>
+                                <ul class="children-one-ul">
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>站内新闻</span></a></li>
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>站内公告</span></a></li>
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>登录日志</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="children-one"><a href="javascript:;"><span>友情链接</span></a></li>
+                            <li class="children-one"><a href="javascript:;"><span>分类管理</span></a></li>
+                            <li class="children-one"><a href="javascript:;"><span>系统日志</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:;"></i><span>网站管理</span><i class="my-icon nav-more"></i></a>
+                        <ul class="children-ul">
+                            <li><a href="javascript:;"><span>站内新闻</span></a></li>
+                            <li><a href="javascript:;"><span>站内公告</span></a></li>
+                            <li><a href="javascript:;"><span>登录日志</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:;"><span>网站权限</span><i class="my-icon nav-more"></i></a>
+                        <ul class="children-ul">
+                            <li class="children-one">
+                                <a href="javascript:;"><span>订单列表</span><i class="my-icon nav-more"></i></a>
+                                <ul class="children-one-ul">
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>站内新闻</span></a></li>
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>站内公告</span></a></li>
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>登录日志</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:;"><span>打个酱油</span></a></li>
+                            <li><a href="javascript:;"><span>也打酱油</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-box" data-nav=".nav_wj">
+            <a class="nav-iconbox" href="javascript:;"><i class="my-icon nav-icon icon_2"></i></a>
+            <div class="nav nav_wj nav-hide">
+                <ul>
+                    <li class="nav-item">
+                        <a href="javascript:;"></i><span>文件管理</span><i class="my-icon nav-more"></i></a>
+                        <ul class="children-ul">
+                            <li class="children-one">
+                                <a href="javascript:;"><span>文件文件</span><i class="my-icon nav-more"></i></a>
+                                <ul class="children-one-ul">
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>站内新闻</span></a></li>
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>站内公告</span></a></li>
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>登录日志</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="children-one"><a href="javascript:;"><span>友情链接</span></a></li>
+                            <li class="children-one"><a href="javascript:;"><span>分类管理</span></a></li>
+                            <li class="children-one"><a href="javascript:;"><span>系统日志</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:;"></i><span>文件列表</span><i class="my-icon nav-more"></i></a>
+                        <ul class="children-ul">
+                            <li><a href="javascript:;"><span>站内新闻</span></a></li>
+                            <li><a href="javascript:;"><span>站内公告</span></a></li>
+                            <li><a href="javascript:;"><span>登录日志</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:;"><span>文件分类</span><i class="my-icon nav-more"></i></a>
+                        <ul class="children-ul">
+                            <li class="children-one">
+                                <a href="javascript:;"><span>订单列表</span><i class="my-icon nav-more"></i></a>
+                                <ul class="children-one-ul">
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>站内新闻</span></a></li>
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>站内公告</span></a></li>
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>登录日志</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:;"><span>打个酱油</span></a></li>
+                            <li><a href="javascript:;"><span>也打酱油</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-box" data-nav=".nav_dd">
+            <a class="nav-iconbox" href="javascript:;"><i class="my-icon nav-icon icon_3"></i></a>
+            <div class="nav nav_dd nav-hide">
+                <ul>
+                    <li class="nav-item">
+                        <a href="javascript:;"></i><span>订单列表</span><i class="my-icon nav-more"></i></a>
+                        <ul class="children-ul">
+                            <li class="children-one">
+                                <a href="javascript:;"><span>网站设置</span><i class="my-icon nav-more"></i></a>
+                                <ul class="children-one-ul">
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>站内新闻</span></a></li>
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>站内公告</span></a></li>
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>登录日志</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="children-one"><a href="javascript:;"><span>友情链接</span></a></li>
+                            <li class="children-one"><a href="javascript:;"><span>分类管理</span></a></li>
+                            <li class="children-one"><a href="javascript:;"><span>系统日志</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:;"></i><span>订单查看</span><i class="my-icon nav-more"></i></a>
+                        <ul class="children-ul">
+                            <li><a href="javascript:;"><span>站内新闻</span></a></li>
+                            <li><a href="javascript:;"><span>站内公告</span></a></li>
+                            <li><a href="javascript:;"><span>登录日志</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:;"><span>订单集合</span><i class="my-icon nav-more"></i></a>
+                        <ul class="children-ul">
+                            <li class="children-one">
+                                <a href="javascript:;"><span>订单列表</span><i class="my-icon nav-more"></i></a>
+                                <ul class="children-one-ul">
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>站内新闻</span></a></li>
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>站内公告</span></a></li>
+                                    <li class="nav-item children-two bgc3"><a href="javascript:;"><span>登录日志</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:;"><span>打个酱油</span></a></li>
+                            <li><a href="javascript:;"><span>也打酱油</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="./js/nav.js"></script>
+</body>
+</html>
+
+
