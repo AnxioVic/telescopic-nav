@@ -1,0 +1,356 @@
+@charset "utf-8";
+/* 以下实际使用若已初始化可删除 .nav height父级需逐级设置为100%*/
+body, html {
+    height: 100%;
+    background: #E2E2E2
+}
+
+body, ul {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font: 14px "微软雅黑", "宋体", "Arial Narrow", HELVETICA;
+    -webkit-text-size-adjust: 100%;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 以上实际使用若已初始化可删除 */
+
+/* nav */
+.nav {
+    position: absolute;
+    width: 160px;
+    height: 100%;
+    background: #263238;
+    transition: all .3s;
+}
+
+.nav a {
+    display: block;
+    overflow: hidden;
+    padding-left: 20px;
+    line-height: 46px;
+    max-height: 46px;
+    color: #ABB1B7;
+    transition: all .3s;
+}
+
+/*.nav a span{margin-left: 30px;}*/
+.nav-top {
+    /*position: relative;*/
+    height: 55px;
+}
+
+.nav-top img {
+    position: absolute;
+    top: 0;
+    right: -55px;
+    background-color: #156464;
+    width: 55px;
+    height: 55px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item.nav-show {
+    border-bottom: none;
+}
+
+.nav-item ul {
+    display: none;
+    background: rgba(0, 0, 0, .1);
+}
+
+.nav-item.nav-show .children-ul {
+    display: block;
+}
+
+.nav-item > a:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 2px;
+    height: 46px;
+    background: #34A0CE;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.children-one > a:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 2px;
+    height: 46px;
+    background: #34A0CE;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.nav .nav-icon {
+    font-size: 20px;
+    position: absolute;
+    margin-left: -1px;
+}
+
+/* 此处修改导航图标 可自定义iconfont 替换*/
+.icon_1::after {
+    content: "\e62b";
+}
+
+.icon_2::after {
+    content: "\e669";
+}
+
+.icon_3::after {
+    content: "\e61d";
+}
+
+/*---------------------*/
+.nav-more {
+    float: right;
+    margin-right: 20px;
+    font-size: 12px;
+    transition: transform .3s;
+}
+
+/* 此处为导航右侧箭头 如果自定义iconfont 也需要替换*/
+.nav-more::after {
+    content: "\e621";
+}
+
+/*---------------------*/
+.nav-show > a > .nav-more {
+    transform: rotate(90deg);
+}
+
+.children-one.nav-show .nav-more {
+    transform: rotate(90deg);
+}
+
+.nav-show, .nav-item > a:hover {
+    color: #FFF;
+    background: rgba(0, 0, 0, .1);
+}
+
+.nav-show, .children-one > a:hover {
+    color: #FFF;
+    background: rgba(0, 0, 0, .1);
+}
+
+.nav-show > a:before, .nav-item > a:hover:before {
+    opacity: 1;
+}
+
+.nav-item li:hover > a {
+    color: #FFF;
+    background: rgba(0, 0, 0, .1);
+}
+
+/*nav-mini  开始*/
+
+.nav-mini.nav {
+    /*width: 60px;*/
+    display: none;
+}
+/* nav-mini  注释此mini变更为点击模式 保留则是hover模式 */
+
+
+/*.nav-mini.nav.hover {*/
+    /*width: 160px;*/
+    /*left: 60px;*/
+/*}*/
+
+.nav-mini.nav-hover.nav-mini-hover .nav-item .children-ul {
+    position: absolute;
+    top: 0px;
+    left: 160px;
+    width: 180px;
+    z-index: 99;
+    background: #3C474C;
+}
+
+.nav-mini.nav-hover.nav-mini-hover .children-one .children-one-ul {
+    position: absolute;
+    top: 0;
+    left: 180px;
+    width: 180px;
+    z-index: 99;
+    background: #3C474C;
+    overflow: hidden;
+}
+
+.nav-mini.nav-hover.nav-mini-hover .nav-item:hover {
+    background: rgba(255, 255, 255, .1);
+}
+
+.nav-mini.nav-hover.nav-mini-hover .nav-item:hover .nav-item a {
+    color: #FFF;
+}
+
+.nav-mini.nav-hover.nav-mini-hover .nav-item:hover a:before {
+    opacity: 1;
+}
+
+.nav-mini.nav-hover.nav-mini-hover .nav-item:hover .children-ul {
+    display: block;
+}
+
+.nav-mini.nav-hover.nav-mini-hover .children-one:hover .children-one-ul {
+    display: block;
+}
+
+.nav-mini.nav-hover.nav-mini-hover .children-one:hover .children-one-ul a span {
+    display: block;
+}
+/* nav-mini  注释此mini变更为点击模式 保留则是hover模式 end*/
+
+
+/*侧边导航*/
+.nav-hover {
+    width: 160px;
+    height: 100%;
+    background: #263238;
+    transition: all .3s;
+    position: absolute;
+    top: 0;
+    /*padding-top: 60px;*/
+    /*opacity: 0;*/
+    border-right: 1px solid rgba(0,0,0,0.3);
+}
+
+.nav-hover.nav-mini  .nav-top img {
+    right:0;
+}
+
+.nav-hover.nav-mini .nav-box {
+    width: 60px;
+    height: 45px;
+}
+
+.nav-hover.nav-mini {
+    /*opacity: 1*/
+    width: 60px;
+}
+
+.nav-hover.nav-mini>ul {
+    width: 220px;
+    height: 100%;
+    position: relative;
+}
+
+.nav-hover.nav-mini .nav-iconbox {
+    display: block;
+    overflow: hidden;
+    line-height: 46px;
+    max-height: 46px;
+    color: #ABB1B7;
+    transition: all .3s;
+    text-align: center;
+}
+
+.nav-iconbox {
+    display: none;
+}
+
+.nav-hover .nav-iconbox>i {
+    padding: 10px;
+}
+
+.nav-hover.nav-mini .nav-box:hover .nav-icon {
+    background-color: #34A0CE;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.nav-hover.nav-mini .nav-box:hover .nav.nav-mini {
+    display: block;
+    top: 0;
+    left: 61px;
+}
+
+.i_hover {
+    background-color: #34A0CE;
+    border-radius: 4px;
+    color: #fff;
+}
+
+/*----------------*/
+/*三级导航*/
+.bgc3 {
+    background-color: seagreen;
+    color: #fff;
+}
+
+.children-two.nav-show > a {
+    background-color: hotpink;
+    color: #fff;
+}
+
+.children-one {
+    position: relative;
+}
+
+.nav-header-avtive {
+    background-color: #34A0CE !important;
+    color: #fff !important;
+}
+
+.nav-header {
+    width: 100%;
+    height: 55px;
+    background: #263238;
+    transition: all .3s;
+    position: absolute;
+    top: 0;
+    opacity: 1;
+}
+
+.nav-header ul {
+    padding-left: 260px;
+}
+
+.nav-header li {
+    width: 140px;
+    height: 50px;
+    display: inline-block;
+    margin-top: 5px;
+    transition: all .3s;
+}
+
+.nav-header.nav-mini {
+    opacity: 1
+}
+
+.nav-header a {
+    display: block;
+    overflow: hidden;
+    padding: 0 20px;
+    line-height: 45px;
+    max-height: 45px;
+    color: #ABB1B7;
+    transition: all .3s;
+    text-align: center;
+    border-bottom: 1px solid #263238;
+}
+
+.nav-header a:hover {
+    color: #FFF;
+    background: rgba(0,0,0,.1);
+    border-bottom: 1px solid seagreen;
+}
+
+.nav-hide {
+    display: none;
+}
