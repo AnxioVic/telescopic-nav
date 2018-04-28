@@ -1,0 +1,591 @@
+@charset "utf-8";
+/* 以下实际使用若已初始化可删除 .nav height父级需逐级设置为100%*/
+body, html {
+    height: 100%;
+    background: #E2E2E2
+}
+
+body, ul {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font: 14px "微软雅黑", "宋体", "Arial Narrow", HELVETICA;
+    -webkit-text-size-adjust: 100%;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 以上实际使用若已初始化可删除 */
+
+/* nav */
+.nav {
+    /*position: absolute;*/
+    width: 160px;
+    background: #263238;
+    transition: all .3s;
+}
+
+.nav a {
+     display: inline-block;
+     /*overflow: hidden;*/
+     /*padding-left: 50px;*/
+     line-height: 46px;
+     max-height: 46px;
+     color: #ABB1B7;
+     transition: all .3s;
+ }
+
+.nav-top {
+    height: 55px;
+}
+
+.nav-top img {
+    position: absolute;
+    top: 0;
+    right: -55px;
+    background-color: #156464;
+    width: 55px;
+    height: 54px;
+}
+
+.nav-item {
+    position: relative;
+    border-bottom: 1px solid #000;
+}
+
+.nav-hover.nav-mini-hover.nav-mini .nav-index a>span{
+    display: none;
+}
+
+.nav-hover.nav-mini-hover.nav-mini .nav-index a>.nav-more-opacity {
+    display: none;
+}
+
+.nav-hover.nav-mini .nav-item {
+    height: 46px;
+}
+
+.nav-item>a {
+    display: inline-block;
+    overflow: hidden;
+    padding-left: 0;
+    line-height: 46px;
+    max-height: 46px;
+    color: #ABB1B7;
+    transition: all .3s;
+    width:100%;
+    text-align: center;
+}
+
+.nav-item:nth-child(1) {
+    border-top: 1px solid #000;
+}
+
+.nav-item.children-two>a {
+    display: block;
+    /*overflow: hidden;*/
+    line-height: 46px;
+    max-height: 46px;
+    color: #ABB1B7;
+    transition: all .3s;
+    text-align: center;
+}
+
+.nav-item:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: rgba(255, 255, 255, .1);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transform: translate3d(-150%,0,0) skewX(40deg);
+    transform: translate3d(-150%,0,0) skewX(40deg);
+}
+
+.nav-item.nav-show {
+    border-bottom: none;
+}
+
+.nav-item ul {
+    display: none;
+    background: rgba(0, 0, 0, .1);
+}
+
+.nav-item.nav-show .children-ul {
+    display: block;
+}
+
+.nav-item > a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 2px;
+    top:22px;
+    height: 0;
+    /*background: #34A0CE;*/
+    background: #009688;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.children-one > a {
+    padding-left: 50px;
+}
+
+.children-two > a {
+    padding-left: 50px;
+}
+
+.nav-hover.nav-mini.nav-mini-hover .children-two>a>.nav-more-opacity {
+    display: none;
+}
+
+.children-one > a:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 2px;
+    top:22px;
+    height: 0;
+    /*background: #34A0CE;*/
+    background: #009688;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.children-two > a:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 2px;
+    top:22px;
+    height: 0;
+    /*background: #34A0CE;*/
+    background: #009688;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.nav .nav-icon {
+    font-size: 20px;
+    position: absolute;
+    margin-left: -1px;
+}
+
+.nav.nav-mini .nav-icon-cb {
+    width: 60px;
+}
+
+.nav-icon-cb {
+    /*width: 60px;*/
+    display: inline-block;
+    /*line-height: 48px;*/
+    /*height: 48px;*/
+    /*padding: 0 20px;*/
+    color: #fff;
+    text-align: center;
+}
+
+.nav-icon-cb-i {
+    padding: 10px;
+}
+
+/* 此处修改导航图标 可自定义iconfont 替换*/
+.icon_1::after {
+    content: "\e62b";
+}
+
+.icon_2::after {
+    content: "\e669";
+}
+
+.icon_3::after {
+    content: "\e61d";
+}
+
+/*---------------------*/
+.nav-more {
+    float: right;
+    margin-left: 20px;
+    margin-right: 18px;
+    font-size: 12px;
+    transition: transform .3s;
+}
+
+.nav-more-opacity {
+    opacity:0;
+}
+
+.nav-item>a>.nav-more {
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+/* 此处为导航右侧箭头 如果自定义iconfont 也需要替换*/
+.nav-more::after {
+    content: "\e621";
+}
+
+/*---------------------*/
+.nav-show > a > .nav-more {
+    transform: rotate(90deg);
+}
+
+.children-one.nav-show .nav-more {
+    transform: rotate(90deg);
+}
+
+.nav-show, .nav-item > a:hover {
+    color: #FFF;
+    /*background: rgba(0, 0, 0, .1);*/
+}
+
+.nav-show, .nav-item:hover {
+    /*color: #FFF;*/
+    background: rgba(0, 0, 0, .1);
+}
+
+
+.nav-show, .children-one > a:hover {
+    color: #FFF;
+    /*background: rgba(221,221,221,0.2) !important;*/
+}
+
+.nav-show, .children-one:hover {
+    /*color: #FFF;*/
+    background: rgba(0, 0, 0, .1);
+}
+
+.children-one > a:hover:before {
+    opacity: 1;
+    height: 46px;
+    top: 0;
+}
+
+.children-two > a:hover:before {
+    opacity: 1;
+    height: 46px;
+    top: 0;
+}
+
+.nav-show > a:before, .nav-item > a:hover:before {
+    opacity: 1;
+    height: 46px;
+    top: 0;
+}
+
+.nav-item:hover>a:before {
+    opacity: 1;
+    height: 46px;
+    top: 0;
+}
+
+.nav-item li:hover > a {
+    color: #FFF;
+    background: rgba(0, 0, 0, .1);
+}
+
+/*nav-mini  开始*/
+
+.nav-mini.nav {
+    width: 60px;
+}
+
+.nav-mini.nav .nav-item>a span {
+    display: none;
+}
+
+.nav-mini.nav .nav-item>a .nav-more {
+    display: none;
+}
+/* nav-mini  注释此mini变更为点击模式 保留则是hover模式 */
+
+.nav-mini.nav-hover .nav-item .children-ul {
+    position: absolute;
+    top: 0;
+    left: 61px;
+    width: 160px;
+    /*height: 100%;*/
+    z-index: 99;
+    background: #3C474C;
+}
+
+.nav-hover.nav-mini .children-one.nav-show>a {
+    border-bottom: 1px solid #000;
+    /*border-top: 1px solid #000;*/
+}
+
+.nav-hover.nav-mini .nav-item:nth-child(1) .children-one.nav-show>a {
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+}
+
+.nav.nav-mini .children-one>a {
+    transition:all 0s;
+}
+
+.nav-mini.nav-hover.nav-mini-hover .nav-item .children-ul {
+    position: absolute;
+    top: 0;
+    left: 61px;
+    width: 160px;
+    /*height: 100%;*/
+    z-index: 99;
+    background: #263238;
+}
+
+.nav-mini.nav-hover.nav-mini-hover .nav-item .children-ul.nav-buttom {
+    top: -90px;
+}
+
+.nav-mini.nav-hover.nav-mini-hover .children-one .children-one-ul {
+    position: absolute;
+    top: 0;
+    left: 160px;
+    width: 160px;
+    z-index: 99;
+    background: #3C474C;
+    overflow: hidden;
+}
+
+.nav-mini.nav-hover.nav-mini-hover .nav-item:hover:before {
+    /*background: rgba(255, 255, 255, .1);*/
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) skewX(0deg);
+    transform: translate3d(0,0,0) skewX(0deg);
+}
+
+.nav-mini.nav-hover.nav-mini-hover .nav-item:hover .nav-item>a {
+    color: #FFF;
+}
+
+.nav-mini.nav-hover.nav-mini-hover .nav-item:hover>a:before {
+    opacity: 1;
+    height: 46px;
+    top: 0;
+}
+
+.nav-mini.nav-hover.nav-mini-hover .children-one:hover>a:before {
+    opacity: 1;
+    height: 46px;
+    top: 0;
+}
+
+.nav-mini.nav-hover.nav-mini-hover .children-two:hover>a:before {
+    opacity: 1;
+    height: 46px;
+    top: 0;
+}
+
+.nav-mini.nav-hover .nav-item:hover .children-ul {
+    display: block !important;
+}
+
+.nav-mini.nav-hover.nav-mini-hover .nav-item:hover .children-ul {
+    display: block !important;
+}
+
+.nav-mini.nav-hover.nav-mini-hover .children-one:hover .children-one-ul {
+    display: block !important;
+}
+
+.nav-mini.nav-hover.nav-mini-hover .children-one:hover .children-one-ul a span {
+    display: block !important;
+}
+/* nav-mini  注释此mini变更为点击模式 保留则是hover模式 end*/
+
+
+/*侧边导航*/
+.nav-hover {
+    width: 160px;
+    height: 100%;
+    background: #263238;
+    transition: all .3s;
+    position: absolute;
+    top: 0;
+    border-right: 1px solid rgba(0,0,0,0.3);
+}
+
+.nav-hover.nav-mini  .nav-top img {
+    right:0;
+}
+
+.nav-hover.nav-mini .nav-box {
+    width: 60px;
+    height: 45px;
+}
+
+.nav-hover.nav-mini {
+    /*opacity: 1*/
+    width: 60px;
+}
+
+.nav-hover.nav-mini>ul {
+    width: 220px;
+    height: 100%;
+    position: relative;
+}
+
+.nav-hover.nav-mini .nav-iconbox {
+    display: block;
+    overflow: hidden;
+    line-height: 46px;
+    max-height: 46px;
+    color: #ABB1B7;
+    transition: all .3s;
+    text-align: center;
+}
+
+.nav-iconbox {
+    display: none;
+}
+
+.nav-hover .nav-iconbox>i {
+    padding: 10px;
+}
+
+.nav-hover.nav-mini .nav-box:hover .nav.nav-mini {
+    display: block;
+    top: 0;
+    left: 61px;
+}
+
+.i_hover {
+    background-color: #34A0CE;
+    border-radius: 4px;
+    color: #fff;
+}
+
+/*----------------*/
+/*三级导航*/
+
+.children-two {
+    position: relative;
+}
+
+.children-one {
+    position: relative;
+}
+
+.nav-header-avtive {
+    background-color: rgba(0,0,0,0.5) !important;
+    color: #fff !important;
+}
+
+.nav-header-item.nav-header-avtive:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 140px;
+    height: 5px;
+    background-color: #5FB878;
+    opacity: 1;
+}
+.nav-header {
+    width: 100%;
+    height: 55px;
+    background: #23262E;
+    transition: all .3s;
+    position: absolute;
+    top: 0;
+    opacity: 1;
+}
+
+.nav-header ul {
+    padding-left: 260px;
+    border-bottom: 5px solid #1AA094;
+}
+
+.nav-header.nav-mini ul {
+    padding-left: 102px;
+}
+
+.nav-header li {
+    width: 140px;
+    height: 50px;
+    display: inline-block;
+    transition: all .3s;
+}
+
+.nav-header.nav-mini {
+    opacity: 1
+}
+
+.nav-header a {
+    display: block;
+    /*overflow: hidden;*/
+    padding: 0 20px;
+    line-height: 50px;
+    max-height: 50px;
+    color: #ABB1B7;
+    transition: all .3s;
+    text-align: center;
+    /*border-bottom: 1px solid #263238;*/
+    position: relative;
+}
+
+.nav-header a:after {
+    content: "";
+    position: absolute;
+    left: 70px;
+    width: 0;
+    bottom: -5px;
+    height: 5px;
+    background: #5FB878;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.nav-header a:hover {
+    background-color: rgba(221,221,221,0.2) !important;
+    color: #fff;
+}
+
+.nav-header a:hover:after {
+    /*color: #FFF;*/
+    /*background: rgba(0,0,0,.1);*/
+    /*border-bottom: 5px solid #5FB878;*/
+    opacity: 1;
+    width: 140px;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-hide {
+    display: none;
+}
+
+/*============重改样式*/
+
+.nav.nav-mini .children-one>a,.nav.nav-mini .children-two>a {
+    /*position: absolute;*/
+    /*top: 0px;*/
+    /*left: 60px;*/
+    padding-left: 0;
+    width: 160px;
+    z-index: 99;
+    display: block;
+    text-align: center;
+}
+
+
+/*设置点击this*/
+
+.nav-hover a.nav-this{
+    background-color: #009688;
+    color: #fff !important;
+}
